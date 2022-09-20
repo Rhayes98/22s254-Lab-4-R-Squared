@@ -15,11 +15,11 @@ int main ()
 	reader.open("README.md", std::ios::in);
 	//open README.md for future operations
 	
-	
+	reader >> printer;
 	while ( !reader.eof() )
 	{
-		reader >> printer;
 		std::cout << printer << std::endl;
+		reader >> printer;
 	}
 	reader.close();
 	
